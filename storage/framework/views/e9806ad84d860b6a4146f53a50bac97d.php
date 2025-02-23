@@ -11,7 +11,7 @@
         </p>
     </header>
 
-    <form name="createPasskey" method="post" action="/" class="mt-6 space-y-6">
+    <form x-data="registerPasskey" x-on:submit.prevent="register()" name="createPasskey" method="post" action="/" class="mt-6 space-y-6">
         <?php echo csrf_field(); ?>
 
         <div>
