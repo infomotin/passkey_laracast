@@ -11,7 +11,7 @@
         </p>
     </header>
 
-    <form name="createPasskey" method="post" action="/" class="mt-6 space-y-6">
+    <form x-data="registerPasskey" x-on:submit.prevent="register()" name="createPasskey" method="post" action="/" class="mt-6 space-y-6">
         <?php echo csrf_field(); ?>
 
         <div>
@@ -103,10 +103,11 @@
     <div class="mt-6">
         <h3 class="font-medium text-gray-900"><?php echo e(__('Your Passkeys')); ?></h3>
         <ul class="mt-2">
+            <?php $__currentLoopData = $user->passkeys; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $passkey): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <li class="px-2 py-2 flex justify-between items-center">
                 <div class="flex flex-col">
-                    <span class="font-semibold">1Password</span>
-                    <span class="font-thin text-sm text-gray-600">Added 2 weeks ago</span>
+                    <span class="font-semibold"><?php echo e($passkey->name); ?></span>
+                    <span class="font-thin text-sm text-gray-600">Added <?php echo e($passkey->created_at->diffForHumans()); ?></span>
                 </div>
 
                 <form method="post" action="/">
@@ -135,6 +136,7 @@
 <?php endif; ?>
                 </form>
             </li>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </ul>
     </div>
 </section>

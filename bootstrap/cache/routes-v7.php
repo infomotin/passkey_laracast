@@ -7,13 +7,53 @@ app('router')->setCompiledRoutes(
     0 => false,
     1 => 
     array (
+      '/sanctum/csrf-cookie' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'sanctum.csrf-cookie',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/api/passkey/register' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'generated::o7Moo2DDFtFlVBrO',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/up' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::b7eRaKdi12ARL54m',
+            '_route' => 'generated::sISNdWO3DGfgaoj0',
           ),
           1 => NULL,
           2 => 
@@ -33,7 +73,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::8FZetvGQN6d1BNLY',
+            '_route' => 'generated::IrE7uF0HElaL4F0v',
           ),
           1 => NULL,
           2 => 
@@ -142,7 +182,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::tXtYD9fCRAkiUcV2',
+            '_route' => 'generated::mKRL3J8w2YVUBN1V',
           ),
           1 => NULL,
           2 => 
@@ -178,7 +218,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::8qcD2rPWbKJ6Hzd1',
+            '_route' => 'generated::ybxveCjgbRNZMgV5',
           ),
           1 => NULL,
           2 => 
@@ -308,7 +348,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::sF69ITZNdjBFhSaN',
+            '_route' => 'generated::gFL4wHDj7MsU6GHt',
           ),
           1 => NULL,
           2 => 
@@ -428,7 +468,82 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-    'generated::b7eRaKdi12ARL54m' => 
+    'sanctum.csrf-cookie' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'sanctum/csrf-cookie',
+      'action' => 
+      array (
+        'uses' => 'Laravel\\Sanctum\\Http\\Controllers\\CsrfCookieController@show',
+        'controller' => 'Laravel\\Sanctum\\Http\\Controllers\\CsrfCookieController@show',
+        'namespace' => NULL,
+        'prefix' => 'sanctum',
+        'where' => 
+        array (
+        ),
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'as' => 'sanctum.csrf-cookie',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'generated::o7Moo2DDFtFlVBrO' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'api/passkey/register',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'api',
+          1 => 'auth:sanctum',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Api\\PasskeyContorller@registerOptions',
+        'controller' => 'App\\Http\\Controllers\\Api\\PasskeyContorller@registerOptions',
+        'namespace' => NULL,
+        'prefix' => 'api',
+        'where' => 
+        array (
+        ),
+        'as' => 'generated::o7Moo2DDFtFlVBrO',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'generated::sISNdWO3DGfgaoj0' => 
     array (
       'methods' => 
       array (
@@ -446,8 +561,8 @@ app('router')->setCompiledRoutes(
                     \\Illuminate\\Support\\Facades\\Event::dispatch(new \\Illuminate\\Foundation\\Events\\DiagnosingHealth);
 
                     return \\Illuminate\\Support\\Facades\\View::file(\'D:\\\\laragon\\\\www\\\\pass-key\\\\adding-passkeys-to-your-laravel-app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Configuration\'.\'/../resources/health-up.blade.php\');
-                }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000004ae0000000000000000";}}',
-        'as' => 'generated::b7eRaKdi12ARL54m',
+                }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000004bf0000000000000000";}}',
+        'as' => 'generated::sISNdWO3DGfgaoj0',
       ),
       'fallback' => false,
       'defaults' => 
@@ -463,7 +578,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::8FZetvGQN6d1BNLY' => 
+    'generated::IrE7uF0HElaL4F0v' => 
     array (
       'methods' => 
       array (
@@ -479,13 +594,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:44:"function () {
     return \\view(\'welcome\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000004b10000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000004c30000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::8FZetvGQN6d1BNLY',
+        'as' => 'generated::IrE7uF0HElaL4F0v',
       ),
       'fallback' => false,
       'defaults' => 
@@ -519,7 +634,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:46:"function () {
     return \\view(\'dashboard\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000004b30000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000004c50000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -691,7 +806,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::tXtYD9fCRAkiUcV2' => 
+    'generated::mKRL3J8w2YVUBN1V' => 
     array (
       'methods' => 
       array (
@@ -712,7 +827,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::tXtYD9fCRAkiUcV2',
+        'as' => 'generated::mKRL3J8w2YVUBN1V',
       ),
       'fallback' => false,
       'defaults' => 
@@ -766,7 +881,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::8qcD2rPWbKJ6Hzd1' => 
+    'generated::ybxveCjgbRNZMgV5' => 
     array (
       'methods' => 
       array (
@@ -787,7 +902,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::8qcD2rPWbKJ6Hzd1',
+        'as' => 'generated::ybxveCjgbRNZMgV5',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1107,7 +1222,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::sF69ITZNdjBFhSaN' => 
+    'generated::gFL4wHDj7MsU6GHt' => 
     array (
       'methods' => 
       array (
@@ -1128,7 +1243,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::sF69ITZNdjBFhSaN',
+        'as' => 'generated::gFL4wHDj7MsU6GHt',
       ),
       'fallback' => false,
       'defaults' => 
